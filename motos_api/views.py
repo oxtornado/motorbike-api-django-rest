@@ -1,4 +1,5 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -63,3 +64,7 @@ class MotoDetailApiView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+=======
+
+# Create your views here.
+>>>>>>> a3319ba (initialize Django project structure with basic settings and configurations)

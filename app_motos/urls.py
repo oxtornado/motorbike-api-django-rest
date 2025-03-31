@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path, include
 from motos_api import urls 
 
@@ -23,3 +24,10 @@ urlpatterns = [
     # Include the app_motos URLs
     path('api/', include('motos_api.urls')),
 ]
+=======
+from django.urls import path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+>>>>>>> a3319ba (initialize Django project structure with basic settings and configurations)
