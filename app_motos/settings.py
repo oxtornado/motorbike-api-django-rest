@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'rest_framework',  # Asegúrate de incluir esto
     'motos_api.apps.MotosApiConfig',
 ]
 
@@ -125,9 +126,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": [
+    "DEFAULT_PERMISSION_CLASSES": (
         "rest_framework.permissions.AllowAny",
-    ],
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+    'rest_framework.renderers.JSONRenderer',  # Habilita JSON por defecto
+    'rest_framework.renderers.BrowsableAPIRenderer',  # Necesario para la interfaz
+    )
 }
 
 # CORS settings
