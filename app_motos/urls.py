@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from motos_api.urls import urlpatterns as motos_urls
+from motos_api import urls 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Include the app_motos URLs
-    path('api/', include('motos_urls')),
+    path('api/', include('motos_api.urls')),
 ]
