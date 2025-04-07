@@ -20,11 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-3gc(aea+q-@d+o7i&f9gp^fu$9u1(=68xvd5l*@^nl8g@$s0a@'
-=======
-SECRET_KEY = 'django-insecure-bcm$lt7sn(==p(m4z2rcqj1ti39j*n8@lr1s^nj$zqhzy2@j63'
->>>>>>> a3319ba (initialize Django project structure with basic settings and configurations)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,12 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'corsheaders',
     'rest_framework',  # Asegúrate de incluir esto
     'motos_api.apps.MotosApiConfig',
-=======
->>>>>>> a3319ba (initialize Django project structure with basic settings and configurations)
 ]
 
 MIDDLEWARE = [
@@ -131,7 +124,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-<<<<<<< HEAD
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": (
@@ -154,5 +146,3 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 APPEND_SLASH = False
-=======
->>>>>>> a3319ba (initialize Django project structure with basic settings and configurations)
