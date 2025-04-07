@@ -63,4 +63,11 @@ class MotoDetailApiView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
+    
+    def delete(self, request, moto_id):
+        moto = self.get_object(moto_id)
+        if moto is None:
+            return Response({"error": "Moto not found"}, status=status.HTTP_404_NOT_FOUND)
+        
+        moto.delete()
+        return Response({"message": "Moto deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
